@@ -138,7 +138,8 @@
 \usepackage{color}
 
 %accent color
-\definecolor{complcol}{RGB}{250,150,10}
+\definecolor{complcol_alt}{RGB}{242,182,97}
+\definecolor{complcol}{RGB}{242,109,97}
 
 %dark background color
 \definecolor{bgcol}{RGB}{110,110,110}
@@ -146,7 +147,8 @@
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
 
-\definecolor{sectcol}{RGB}{0,120,150}
+%\definecolor{sectcol}{RGB}{0,120,150}
+\definecolor{sectcol}{RGB}{97, 194, 242}
 
 
 %============================================================================%
@@ -210,9 +212,9 @@
 \newenvironment{metasection}[1] {
         \vspace{6pt}
         \begin{center}
-                \textcolor{white}{\large{\uppercase{#1}}}\\
+                \textcolor{black}{\large{\uppercase{#1}}}\\
         \normalsize
-        \parbox{0.7\mpwidth}{\textcolor{white}  \hrule}
+        \parbox{0.7\mpwidth}{\textcolor{black}  \hrule}
 }{\end{center}}
 
 %----------------------------------------------------------------------------------------
@@ -299,68 +301,95 @@
 %============================================================================%
 \begin{document}
 
-\begin{samepage}
-
 \fcolorbox{white}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.3\linewidth}
 
+%----------------------------------------------------------------------------------------
+%
+%       PICTURE
+%
+%----------------------------------------------------------------------------------------
+\vspace{8}
+\centering
+\includegraphics[width=0.9\linewidth,]{thilo.jpg}
+
+%----------------------------------------------------------------------------------------
+%
+%       CONTACT SECTION
+%
+%----------------------------------------------------------------------------------------
 
 \begin{metasection}{Contact}
 
-        \icontext{MapMarker}{12}{Bremen, Germany}{white}\\[6pt]
-        \icontext{MobilePhone}{12}{+49 176 313 *** **}{white}\\[6pt]
-        \icontext{Send}{12}{info@jankuester.com}{white}\\[6pt]
-        \icontext{MousePointer}{12}{www.jankuester.com}{white}\\[6pt]
-        \icontext{Github}{12}{github.com/jankapunkt}{white}\\[6pt]
-        \icontext{Twitter}{12}{@Kuester\_Jan}{white}\\[6pt]
-
+        \icontext{MapMarker}{12}{Voltastr. 65,90459 Nürnberg}{black}\\[6pt]
+        \icontext{MobilePhone}{12}{+49 160 45 72 775}{black}\\[6pt]
+        \icontext{Send}{12}{business@thilo-wendt.de}{black}\\[6pt]
+        
 \end{metasection}
 
 %----------------------------------------------------------------------------------------
 %       META SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{metasection}{Fields}
+\begin{metasection}{Programming Languages}
 
-\icontext{Code}{12}{Software Development}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\\[6pt]
+%\icontext{Circle}{12}{C}{black}
 
-\icontext{CommentsO}{12}{Consulting}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+  \begin{tabular*}{0.9\linewidth}[c]{rl}
+    C & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircle \space\space \faCircleO} \\
+    C++ & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircleO \space\space \faCircleO} \\
+    VHDL  & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircleO \space\space \faCircleO \space\space \faCircleO} \\
+    \faHtml5 \faCss3 & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircleO \space\space \faCircleO} \\
+    SQL & \textcolor{complcol}{\faCircle \space\space \faCircleO \space\space
+        \faCircleO \space\space \faCircleO \space\space \faCircleO} \\
+    Simatic S7  & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircleO \space\space \faCircleO \space\space \faCircleO} \\
+  \end{tabular*}
 
-\icontext{CodeFork}{12}{Project Management}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+
 
 
 \end{metasection}
 
 
-\begin{metasection}{Technologies}
+\begin{metasection}{Fields}
 
-\textcolor{white}{
-\icontext{Code}{12}{JavaScript}{white} \\[6pt]
-\icontext{Code}{12}{Meteor}{white} \\[6pt]
-\icontext{Fire}{12}{Blaze}{white} \\[6pt]
-\icontext{Database}{12}{MongoDB}{white} \\[6pt]
-\icontext{CodeFork}{12}{Git}{white} \\[6pt]
-}
+\faFlash \space PCB-Design \\
+\textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircleO \space\space \faCircleO} \\[6pt]
+
+\faCode \space Embedded Programming \\
+\textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircle \space\space \faCircleO} \\[6pt]
+
+\faServer \space Server Architecture on Linux \\
+\textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircleO \space\space \faCircleO}
+
+
 \end{metasection}
 
 \begin{metasection}{Tools}
 
-\textcolor{white}{
-\icontext{Code}{12}{Webstorm}{white} \icontext{CodeFork}{12}{SourceTree}{white}\\[6pt]
-\icontext{Terminal}{12}{Terminal}{white}  \icontext{PaintBrush}{12}{Inkscape}{white}\icontext{Cube}{12}{Blender}{white}
-}
-\end{metasection}
+\faFlash \space Altium Designer and EAGLE \\
+\textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircle \space\space \faCircleO} \\[6pt]
+\faCodeFork \space git and SourceTree \\
+\textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircle \space\space \faCircleO} \\[6pt]
 
-\begin{metasection}{Activities}
+\faCubes \space Docker \\
+\textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircle \space\space \faCircleO} \\[6pt]
 
-\textcolor{white}{\LARGE{\icon{Gamepad}{24}{white} \icon{Headphones}{24}{white}  \icon{Bicycle}{24}{white}}}
-\end{metasection}
+\faTerminal \space Terminal (Linux and Mac) \\
+\textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+        \faCircle \space\space \faCircle \space\space \faCircleO}
 
-\begin{metasection}{Operating Systems}
 
-\textcolor{white}{\LARGE{\icon{Linux}{24}{white} \icon{Apple}{24}{white}  \icon{Windows}{24}{white}}}
 
 \end{metasection}
 
@@ -373,22 +402,20 @@
 %\includegraphics[width=0.35\mpwidth]{qrcode}
 \end{center}
 
-\end{minipage}}
-
-
+\end{minipage}}%
 \fcolorbox{white}{white}{\begin{minipage}[r][0.7\textheight][t]{0.69\linewidth}
 
 %---------------------------------------------------------------------------------------
 %       TITLE HEADLINE
 %----------------------------------------------------------------------------------------
-%\vspace{-3pt}
+\vspace{-107pt}
 % use this for multiple words like working titles etc.
-%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\uppercase{M.Sc. Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
-% \large{ \textcolor{white}{{JS Fullstack Engineer}}}}
-%}}
+% \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\uppercase{M.Sc. Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
+%  \large{ \textcolor{white}{{JS Fullstack Engineer}}}}
+% }}
 
 % use this for single words, e.g. CV or RESUME etc.
-%\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{Resume}} } }}
+\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{Resume}} } }}
 
 %----------------------------------------------------------------------------------------
 %       HEADER IMAGE
@@ -470,7 +497,6 @@
 %end of the colorbox 
 
 
-\end{samepage}
 %-------------------------------------------------------------------------------------------------
 %       ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
 %--------------------------------------------------------------------------------------------------
