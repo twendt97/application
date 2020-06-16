@@ -126,6 +126,9 @@
 %\floatstyle{boxed} 
 %\restylefloat{figure}
 
+%for SVGs
+\usepackage{svg}
+
 %for drawing graphics           
 \usepackage{tikz}                               
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
@@ -202,7 +205,7 @@
 \newcommand{\cvsection}[1]
 {
 \colorbox{sectcol}{\mystrut \makebox[1\mpwidth][l]{
-\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textbf{\textcolor{white}{\uppercase{#1}}}\hspace{4pt}
+\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textbf{\textcolor{black}{\uppercase{#1}}}\hspace{4pt}
 }}\\
 }
 
@@ -233,7 +236,7 @@
 {
 \vspace{8pt}
         \begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
-        \textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1} 
+        \textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3} \\ \textcolor{bgcol}{#1} 
 
         \end{tabular*}
 \vspace{-12pt}
@@ -320,7 +323,7 @@
 
 \begin{metasection}{Contact}
 
-        \icontext{MapMarker}{12}{Voltastr. 65,90459 Nürnberg}{black}\\[6pt]
+        \icontext{MapMarker}{12}{Voltastr. 65, 90459 Nürnberg}{black}\\[6pt]
         \icontext{MobilePhone}{12}{+49 160 45 72 775}{black}\\[6pt]
         \icontext{Send}{12}{business@thilo-wendt.de}{black}\\[6pt]
         
@@ -335,15 +338,15 @@
 %\icontext{Circle}{12}{C}{black}
 
   \begin{tabular*}{0.9\linewidth}[c]{rl}
-    C & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+    \faCode \space C & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
         \faCircle \space\space \faCircle \space\space \faCircleO} \\
-    C++ & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+    \faCode \space C++ & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
         \faCircle \space\space \faCircleO \space\space \faCircleO} \\
-    VHDL  & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+    \faCode \space VHDL  & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
         \faCircleO \space\space \faCircleO \space\space \faCircleO} \\
-    \faHtml5 \faCss3 & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
+    HTML \& CSS & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
         \faCircle \space\space \faCircleO \space\space \faCircleO} \\
-    SQL & \textcolor{complcol}{\faCircle \space\space \faCircleO \space\space
+    \faDatabase \space SQL & \textcolor{complcol}{\faCircle \space\space \faCircleO \space\space
         \faCircleO \space\space \faCircleO \space\space \faCircleO} \\
     Simatic S7  & \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
         \faCircleO \space\space \faCircleO \space\space \faCircleO} \\
@@ -412,7 +415,7 @@ French \\
 % }}
 
 % use this for single words, e.g. CV or RESUME etc.
-\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{Resume}} } }}
+\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Thilo Wendt}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{CV}} } }}
 
 %----------------------------------------------------------------------------------------
 %       HEADER IMAGE
@@ -434,61 +437,68 @@ French \\
 %============================================================================%
 
 %---------------------------------------------------------------------------------------
-%       STATUS
-%----------------------------------------------------------------------------------------
+%       EDUCATION SECTION
+%--------------------------------------------------------------------------------------
+
+% param 1:      event time i.e. 2014 or 2011-2014 etc.
+% param 2:      event name (what did you do?)
+% param 3:      institution (where did you work / study)
+% param 4:      what was your position
+% param 5:      some words about your contributions
+
+\cvsection{Education}
+
+\cvevent{Since 10/2019}{Master Applied Research in Engineering
+  Sciences}{TH-Nuremberg/Institut ELSYS}{Hardware development for an SoC-FPGA
+  based real-time processing system}{Academic education in system engineering focused
+on HW-SW co design}
+
+\cvevent{10/2019 - 06/2020}{Master Project: Development and Optimization of PCBs
+with Altium Designer}{TH-Nuremberg/Institut-ELSYS}{Development of an extension
+board for a real time processing system}{Revision of the main board of a real
+time processing system}
+
+\cvevent{10/2015 - 09/2019}{Graduated as B. Eng. Electrical Engineering and
+  Information Technology (1.6)}{TH-Nuremberg Georg Simon Ohm}{Bachelor thesis:
+  Development of an LED-based lighting unit for trains}{Focus: System design of embedded systems including PCB design}
+
+\cvevent{08/2015 - 08/2018}{Professional education in automation engineering
+  (IHK) (91 of 100 points)}{Siemens}{Training in manual skills for the buildup
+  of automated industry facilities}{Training in programming of SIMATIC S7 Systems}
+
+\cvevent{09/2010 - 07/2015}{School and Abitur}{Gymnasium Isernhagen}{Graduated
+  with focus on nature sciences and mathematics with a final grade of
+  1.4}{Engagement in several work groups, e.g. sound and light for theater}
 
 %---------------------------------------------------------------------------------------
 %       EXPERIENCE
 %----------------------------------------------------------------------------------------
+
+\vspace{15pt}
+
 \cvsection{Experience}
 
-%
-\cvevent{2016/09 - now}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React}{Design software architecture and leading development}
+\cvevent{10/2016 - 01/2018}{Tutorials for students}{TH-Nuremberg Georg Simon
+  Ohm}{Subjects: Electrical measuring, microcomputers, fundamentals of
+  electrical engineering}{Gained skills concerning presentation techniques and group leading}
 
-%\textcolor{softcol}{\hrule}
+\cvevent{07/2017 - 07/2018}{International internships on power plant
+  \mbox{construction} sites}{Siemens}{Internship in the UAE (2017) and in Egypt
+  (2018)}{Gained field experience concerning real world requirements of
+  technical systems}
 
-
-%\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Integrated Camunda BPMN engine and BPMN.IO modeler in We4IT Aveedo}
-
-
-%\textcolor{softcol}{\hrule}
-
-
-\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
-
-%\textcolor{softcol}{\hrule}
-
-
-%
-\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
 \vspace{12pt}
-%---------------------------------------------------------------------------------------
-%       EDUCATION SECTION
-%--------------------------------------------------------------------------------------
-\cvsection{Education}
+\cvsection{Side projects}
 
-\cvevent{2015 / 07}{Graduated as M.Sc. Digital Media}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support, co-developed software (Java) }{Formed a scrum team, mainted project dev server (Debian), surveyed target audience}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{Professionalized in research methods, software development and e-assessment}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
-
+ \begin{tabular*}{0.9\linewidth}[c]{m{0.05\linewidth} m{0.8\linewidth}}
+  \includegraphics[width=0.5cm]{dumbbell-solid.pdf} & Rowing (2010 - 2019) and
+                                                    Triathlon (2019 - now) \\
+  \includegraphics[width=0.5cm]{cloud.pdf} & Setup and maintenance of a Docker
+                                           based Nextcloud and an online
+                                           \mbox{community} (website, forum and wiki) \\
+  \includegraphics[width=0.5cm]{music.pdf} & Singer and bassist in several bands
+                                           (2010 - 2017)
+\end{tabular*}
 
 \end{minipage}}
 %end of the colorbox 
@@ -498,9 +508,9 @@ French \\
 %       ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
 %--------------------------------------------------------------------------------------------------
 
-% \null
-% \vspace*{\fill}
-% \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{Coypright 2018 jkuester@uni-bremen.de} $\cdot$ \textcolor{white}{licensed unter MIT license}}}
+\null
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{ \small \textcolor{white}{\today}}}
 
 %============================================================================%
 %
