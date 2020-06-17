@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Elmueller Formal Letter
+% LaTeX Template
+% Version 1.3 (20/11/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Micha Elmueller (http://micha.elmueller.net/) with modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%       DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+fontsize=12pt,
+paper=a4,
+enlargefirstpage=off,
+firsthead=true,
+fromalign=right,
+fromrule=below,
+firstfood=false,
+pagenumber=false, % Removes page numbers from page 2 onwards when false 
+parskip=half, % Separates paragraphs with some whitespace, use %
+%parskip=full %for more space or comment out to return to % default
+foldmarks=false, % Prints small fold marks on the left of the page 
+addrfield=true, % Set to false to hide the addressee section - you will then want
+               % to adjust the height of the body of the
+backaddress=false
+]{scrlttr2}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % For extra glyphs (accents, etc)
+
+\usepackage[light,math]{iwona}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[ngerman]{babel} % Explicitly load the babel package to stop an error
+                            % occurring on some LaTeX installations
+
+%---------------------------------------------------------------------------------------
+% Layout
+%--------------------------------------------------------------------------------------
+
+
+\renewcommand*{\raggedsignature}{\raggedright} % Stop the signature from indenting
+
+%\LoadLetterOption{visualize}% loads visualize.lco to visualize boxes
+%\showfields{address}% show the address box
+
+% if the cover letter is sent via e-mail the address field can be moved up to
+% gain space
+
+\setplength{toaddrvpos}{20mm}
+\setplength{refvpos}{60mm}
+
+% \setplength{backaddrheight}{0pt}% because backaddress=off
+% \setplength{toaddrhpos}{2.5cm}%distance from left
+% \setplength{toaddrvpos}{2cm}%distance from top
+% \setplength{toaddrheight}{3.5cm}%height of the addressbox
+% \setplength{toaddrwidth}{10cm}% width of the addressbox
+
+\usepackage{lipsum}
+
+%----------------------------------------------------------------------------------------
+%       YOUR INFORMATION AND LETTER DATE
+%----------------------------------------------------------------------------------------
+
+\setkomavar{fromname}{Thilo Wendt} % Your name used in the from address
+
+\setkomavar{fromaddress}{Voltastr. 65 $\cdot$ D-90459 Nürnberg} % Your address
+
+\setkomavar{signature}{Thilo Wendt} % Your name used in the signature
+
+\setkomavar{subject}{Betreff}
+
+\date{\today} % Date of the letter
+
+% \setkomavar{yourref}[Ihr Zeichen]{24/647/31042}
+% \setkomavar{yourmail}[Ihr Schreiben vom]{13.02.2020}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%       ADDRESSEE
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{Deutscher Akademischer Austauschdienst e.V. \\
+    Kennedyallee 50 \\ D-53175 Bonn} % Addressee name and address
+
+%----------------------------------------------------------------------------------------
+%       LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\opening{Sehr geehrte Damen und Herren,}
+
+\lipsum[1]{}
+
+\lipsum[1]{}
+
+\closing{Mit freundlichen Grüßen}
+
+\setkomavar*{enclseparator}{Anlagen} % Change the default "encl:" to "Attached:"
+\encl{CV, Bachelor's diploma} % Attached documents
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+ 
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

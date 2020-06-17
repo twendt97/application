@@ -1,4 +1,4 @@
-%============================================================================%
+\message{ !name(cv.tex)}%============================================================================%
 %
 %       DOCUMENT DEFINITION
 %
@@ -14,7 +14,6 @@
 
 %we use utf8 since we want to build from any machine
 \usepackage[utf8]{inputenc}             
-\usepackage[ngerman]{babel}
 
 %----------------------------------------------------------------------------------------
 %       LOGIC
@@ -35,8 +34,9 @@
 %\usepackage[default]{raleway}
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
-\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+%\usepackage[light,math]{iwona}
+%\usepackage[thin]{roboto}
+
 
 % set font default
 \renewcommand*\familydefault{\sfdefault}        
@@ -213,7 +213,7 @@
 {
 \vspace{8pt}
         \begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
-        \textcolor{black}{#2} & \textcolor{complcol}{#3} \\ \textcolor{bgcol}{#1} 
+        \textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3} \\ \textcolor{bgcol}{#1} 
 
         \end{tabular*}
 \vspace{-12pt}
@@ -281,6 +281,9 @@
 %============================================================================%
 \begin{document}
 
+\message{ !name(cv.tex) !offset(-3) }
+
+
 \fcolorbox{white}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.3\linewidth}
 
 %----------------------------------------------------------------------------------------
@@ -298,19 +301,19 @@
 %
 %----------------------------------------------------------------------------------------
 
-\begin{metasection}{Kontakt}
+\begin{metasection}{Contact}
 
         \icontext{MapMarker}{12}{Voltastr. 65, 90459 Nürnberg}{black}\\[6pt]
         \icontext{MobilePhone}{12}{+49 160 45 72 775}{black}\\[6pt]
         \icontext{Send}{12}{business@thilo-wendt.de}{black}\\[6pt]
-
+        
 \end{metasection}
 
 %----------------------------------------------------------------------------------------
 %       META SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{metasection}{Programmiersprachen}
+\begin{metasection}{Programming Languages}
 
 %\icontext{Circle}{12}{C}{black}
 
@@ -353,17 +356,17 @@
 
 \end{metasection}
 
-\begin{metasection}{Sprachen}
+\begin{metasection}{Languages}
 
-Deutsch \\
+German \\
 \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
         \faCircle \space\space \faCircle \space\space \faCircle} \\[6pt]
 
-Englisch \\
+English \\
 \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
         \faCircle \space\space \faCircle \space\space \faCircleO} \\[6pt]
 
-Französisch \\
+French \\
 \textcolor{complcol}{\faCircle \space\space \faCircle \space\space
         \faCircle \space\space \faCircleO \space\space \faCircleO}
 
@@ -374,10 +377,10 @@ Französisch \\
 %       QR CODE (optional)
 %----------------------------------------------------------------------------------------
 
-%\vspace{12pt}
-%\begin{center}
+\vspace{12pt}
+\begin{center}
 %\includegraphics[width=0.35\mpwidth]{qrcode}
-%\end{center}
+\end{center}
 
 \end{minipage}}
 \fcolorbox{white}{white}{\begin{minipage}[r][0.7\textheight][t]{0.69\linewidth}
@@ -392,7 +395,7 @@ Französisch \\
 % }}
 
 % use this for single words, e.g. CV or RESUME etc.
-\colorbox{bgcol}{\makebox[\mpwidth][c]{\huge{\textcolor{white}{\uppercase{Thilo Wendt}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.7cm}} \huge{\textcolor{white}{\uppercase{Lebenslauf}} } }}
+\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Thilo Wendt}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{CV}} } }}
 
 %----------------------------------------------------------------------------------------
 %       HEADER IMAGE
@@ -423,64 +426,58 @@ Französisch \\
 % param 4:      what was your position
 % param 5:      some words about your contributions
 
-\vspace{13pt}
-\cvsection{Bildung}
+\cvsection{Education}
 
-\cvevent{Seit 10/2019}{Master Applied Research in Engineering
-  Sciences}{TH-Nürnberg/Institut ELSYS}{Hardwareentwicklung für eine
-  echtzeitfähige Berechnungsplattform}{Akademische Ausbildung im Bereich
-System Engineering}
+\cvevent{Since 10/2019}{Master Applied Research in Engineering
+  Sciences}{TH-Nuremberg/Institut ELSYS}{Hardware development for an SoC-FPGA
+  based real-time processing system}{Academic education in system engineering focused
+on HW-SW co design}
 
-\cvevent{10/2019 - 06/2020}{Master Projekt: Entwicklung und Optimierung von
-  Leiterplatten mit Altium Designer}{TH-Nürnberg/Institut-ELSYS}{Entwicklung
-  einer Erweiterungsplatine für eine echtzeitfähige
-  Berechnungsplattform}{Revision des Mainboards einer echtzeitfähigen Berechnungsplattform}
+\cvevent{10/2019 - 06/2020}{Master Project: Development and Optimization of PCBs
+with Altium Designer}{TH-Nuremberg/Institut-ELSYS}{Development of an extension
+board for a real time processing system}{Revision of the main board of a real
+time processing system}
 
-\cvevent{10/2015 - 09/2019}{Abschluss B. Eng. Elektrotechnik und
-  Informationstechnik (1.6)}{TH-Nürnberg Georg Simon Ohm}{Bachelorarbeit:
-  Entwicklung einer LED basierten Beleuchtungseinheit für Züge}{Schwerpunkt:
-  System Design von eingebetteten Systemen und PCB-Entwicklung}
+\cvevent{10/2015 - 09/2019}{Graduated as B. Eng. Electrical Engineering and
+  Information Technology (1.6)}{TH-Nuremberg Georg Simon Ohm}{Bachelor thesis:
+  Development of an LED-based lighting unit for trains}{Focus: System design of embedded systems including PCB design}
 
-\cvevent{08/2015 - 08/2018}{Ausbildung zum Elektroniker für
-  Automatisierungstechnik (IHK) (91 von 100 Punkten)}{Siemens}{Handwerkliche
-  Ausbildung im Bereich Automatisierungstechnik}{Programmierung von Siemens
-  Simatic S7 speicherprogrammierbare Steuerungen}
+\cvevent{08/2015 - 08/2018}{Professional education in automation engineering
+  (IHK) (91 of 100 points)}{Siemens}{Training in manual skills for the buildup
+  of automated industry facilities}{Training in programming of SIMATIC S7 Systems}
 
-\cvevent{09/2010 - 07/2015}{Schule und Abitur (1.4)}{Gymnasium
-  Isernhagen}{Abschluss mit Schwerpunkt Mathematik und
-  Naturwissenschaften}{Engagement in verschiedenen Arbeitsgruppen z.B. Licht und
-Ton für Theateraufführungen}
+\cvevent{09/2010 - 07/2015}{School and Abitur}{Gymnasium Isernhagen}{Graduated
+  with focus on nature sciences and mathematics with a final grade of
+  1.4}{Engagement in several work groups, e.g. sound and light for theater}
 
 %---------------------------------------------------------------------------------------
 %       EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\vspace{23pt}
+\vspace{15pt}
 
-\cvsection{Erfahrung}
+\cvsection{Experience}
 
-\cvevent{10/2016 - 01/2018}{Studentisches Tutorium}{TH-Nürnberg Georg Simon
-  Ohm}{Themen: Elektrische Messtechnik, Mikrocomputertechik, Grundlagen der
-  Elektrotechnik}{Ausbau von Präsentationstechniken und Führungsqualitäten
-  gegenüber Gruppen}
+\cvevent{10/2016 - 01/2018}{Tutorials for students}{TH-Nuremberg Georg Simon
+  Ohm}{Subjects: Electrical measuring, microcomputers, fundamentals of
+  electrical engineering}{Gained skills concerning presentation techniques and group leading}
 
-\cvevent{07/2017 - 07/2018}{Internationale Praktika im Bereich
-  Kraftwerks\-inbetriebnahme}{Siemens}{Praktikum in den VAE (2017) und in Ägypten
-  (2018)}{Interkulturelle und fachliche Erfahrungen in außereuropäischen
-  Kulturen}
+\cvevent{07/2017 - 07/2018}{International internships on power plant
+  \mbox{construction} sites}{Siemens}{Internship in the UAE (2017) and in Egypt
+  (2018)}{Gained field experience concerning real world requirements of
+  technical systems}
 
 \vspace{12pt}
-\cvsection{Nebenprojekte}
+\cvsection{Side projects}
 
  \begin{tabular*}{0.9\linewidth}[c]{m{0.05\linewidth} m{0.8\linewidth}}
-  \includegraphics[width=0.5cm]{dumbbell-solid.pdf} & Rudern (2010 - 2019) and
-                                                    Triathlon (seit 2019) \\
-  \includegraphics[width=0.5cm]{cloud.pdf} & Aufbau und Wartung eines Docker
-                                             basierten Cloud Servers und einer
-                                             Online Community Infrastruktur
-                                             (Website, Forum und Wiki) \\
-  \includegraphics[width=0.5cm]{music.pdf} & Sänger und Bassist in verschiedenen
-                                             Bands (2010 - 2017)
+  \includegraphics[width=0.5cm]{dumbbell-solid.pdf} & Rowing (2010 - 2019) and
+                                                    Triathlon (2019 - now) \\
+  \includegraphics[width=0.5cm]{cloud.pdf} & Setup and maintenance of a Docker
+                                           based Nextcloud and an online
+                                           \mbox{community} (website, forum and wiki) \\
+  \includegraphics[width=0.5cm]{music.pdf} & Singer and bassist in several bands
+                                           (2010 - 2017)
 \end{tabular*}
 
 \end{minipage}}
@@ -512,3 +509,5 @@ Ton für Theateraufführungen}
 %%% mode: latex
 %%% TeX-master: t
 %%% End:
+
+\message{ !name(cv.tex) !offset(-513) }
